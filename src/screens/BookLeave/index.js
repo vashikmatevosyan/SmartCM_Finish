@@ -13,6 +13,7 @@ import {Calendar} from "react-native-calendars/src/index";
 import { getBookData } from "../../store/actions/bookLeave";
 import { useDispatch } from "react-redux";
 import _ from "lodash";
+import { MyInput } from "../../components/MyInput";
 
 function Index(props) {
     const [flag , setFlag] = useState(false);
@@ -81,7 +82,7 @@ function Index(props) {
                     shadowRadius: 3.05,
                     elevation: 4
                 }]}/>
-            <TextInput editable={flag ? false : !flag} style={style.textArea} placeholder='Description'  placeholderTextColor='#818195' />
+            <MyInput editable={flag ? false : !flag} style={style.textArea} placeholder='Description'  placeholderTextColor='#818195' />
             <TouchableOpacity onPress={()=> {
                 setDays('Date*')
                 setDurTime('Duration')
